@@ -9,7 +9,24 @@ const io = new Server(server);
 app.use(express.static('public'));
 
 let players = [];
-let words = ["apple", "banana", "castle", "pyramid", "movie", "pizza"];
+let words = [
+  "apple", "banana", "castle", "pyramid", "movie", "pizza", "Jahnvi", "Pokemon",
+  "mountain", "river", "computer", "keyboard", "television", "ocean", "jungle",
+  "space", "robot", "rocket", "elephant", "guitar", "violin", "bicycle", "airplane",
+  "library", "doctor", "engineer", "teacher", "student", "school", "university",
+  "rainbow", "cloud", "storm", "desert", "forest", "volcano", "planet", "sun",
+  "moon", "star", "comet", "galaxy", "zebra", "lion", "tiger", "panda", "koala",
+  "penguin", "dolphin", "whale", "shark", "octopus", "submarine", "pirate", "ninja",
+  "samurai", "dragon", "wizard", "witch", "ghost", "zombie", "vampire", "werewolf",
+  "magnet", "battery", "lamp", "candle", "mirror", "glasses", "chair", "table",
+  "notebook", "pencil", "pen", "eraser", "ruler", "calculator", "phone", "camera",
+  "tripod", "microphone", "speaker", "clock", "watch", "hat", "glove", "jacket",
+  "socks", "shoes", "sandals", "boots", "belt", "scarf", "bag", "wallet", "money",
+  "coin", "ticket", "passport", "map", "train", "bus", "car", "bike", "taxi", "plane",
+  "airport", "station", "hotel", "room", "bed", "pillow", "blanket", "soap", "brush",
+  "toothpaste", "shampoo", "towel", "fridge", "oven", "stove", "sink", "mirror"
+];
+
 
 io.on('connection', (socket) => {
   if (players.length >= 4) {
